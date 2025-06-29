@@ -7,7 +7,7 @@ Code Examples for Mastering Object-Oriented Python 2nd Edition
 Chapter 2. Example 3.
 """
 
-from Chapter_2.ch02_ex2 import *
+from ch02_ex2 import *
 from typing import cast, Iterable, Iterator
 
 # Factory Function
@@ -232,7 +232,7 @@ __test__ = {name: value for name, value in locals().items() if name.startswith("
 
 if __name__ == "__main__":
     import doctest
-    doctest.testmod(verbose=False)
+    doctest.testmod(verbose=True)
 
     deck = [
         card(rank, suit) for rank in range(1, 14) for suit in cast(Iterable[Suit], Suit)
