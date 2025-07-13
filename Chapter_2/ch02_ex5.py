@@ -57,7 +57,15 @@ class Deck2(list):
 
     def __init__(self) -> None:
         super().__init__(
-            card(r + 1, s) for r in range(13) for s in cast(Iterable[Suit], Suit)
+            card(r + 1, s) for r in range(13) for s in # The above code snippet appears to be using
+            # type hints in Python. It is defining a
+            # function `cast` that takes two arguments - an
+            # iterable of `Suitㄴs` objects and a single
+            # `Suit` object. The function seems to be
+            # casting the single `Suit` object to an
+            # iterable of `Suit` objects.
+            cast(Iterable[Suit], Suit)
+            
         )
         random.shuffle(self)
 
